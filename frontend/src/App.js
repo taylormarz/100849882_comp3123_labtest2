@@ -28,12 +28,21 @@ function App() {
         {weather && (
           <div className="weather-panels-container">
             <div className="weather-panel">
-              <h2>{weather.name}, {weather.sys.country}</h2>
+              <h2>
+                {weather.name}, {weather.sys.country}
+                <img
+                  src={`http://openweathermap.org/img/wn/${weather.weather[0].icon}.png`}
+                  alt={weather.weather[0].description}
+                  className="weather-icon"
+                />
+              </h2>
               <p>Current Time: {new Date().toLocaleTimeString()}</p>
               <p>Sunrise: {new Date(weather.sys.sunrise * 1000).toLocaleTimeString()}</p>
               <p>Sunset: {new Date(weather.sys.sunset * 1000).toLocaleTimeString()}</p>
-              <p>Description: {weather.weather[0].description}</p>
               <p>Humidity: {weather.main.humidity}%</p>
+              <p>
+                Description: {weather.weather[0].description}{' '}
+              </p>
             </div>
 
             <div className="weather-panel">
