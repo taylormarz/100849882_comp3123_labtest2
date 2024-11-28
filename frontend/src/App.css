@@ -1,38 +1,69 @@
-.App {
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('/img/toronto.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: 'Arial', sans-serif;
+  color: white;
+}
+
+.app-header {
   text-align: center;
+  margin-bottom: 20px;
+  background-color: transparent;
+  padding: 10px 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app-header h1 {
+  font-size: 3rem;
+  color: #512C46;
+  margin: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.weather-container {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: flex-start;
+  text-align: center;
+  padding: 20px;
+}
+
+.weather-panels-container {
+  background: rgba(81, 44, 70, 0.7);
+  border-radius: 15px;
+  width: 80%;
+  max-width: 800px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.weather-panel {
+  background: rgba(81, 44, 70, 1);
+  padding: 20px;
+  border-radius: 10px;
+  flex: 1;
+  max-width: 300px;
+  min-width: 250px;
+  margin: 25px;
+  text-align: left;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.weather-panel h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.weather-panel p {
+  font-size: 1.2rem;
+  margin: 5px 0;
 }
+
+
+
+
