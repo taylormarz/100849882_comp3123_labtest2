@@ -1,8 +1,9 @@
 // COMP3123 - Fullstack Development, Labtest 02
 // Taylor Martin, Student ID: 100849882
 
-import { express } from 'express';
-import { cors } from 'cors';
+import express from 'express';
+import cors from 'cors';
+import { getWeatherRoute } from './weather-route';
 
 const app = express();
 const SERVER_PORT = 8080;
