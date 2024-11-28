@@ -1,3 +1,6 @@
+// COMP3123 - Fullstack Development, Labtest 02
+// Taylor Martin, Student ID: 100849882
+
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './App.css';
