@@ -3,7 +3,7 @@
 
 import express from 'express';
 import cors from 'cors';
-import { getWeatherRoute } from './weather-route';
+import { getWeatherRoute } from './weather-route.js';
 
 const app = express();
 const SERVER_PORT = 8080;
@@ -17,6 +17,8 @@ app.use(cors({
 
 // processing requests
 app.use(express.json());
+
+app.use('/api', getWeatherRoute());
 
 app.listen(SERVER_PORT, () => { 
     console.log(`Server running on http://localhost:${SERVER_PORT}`) 
